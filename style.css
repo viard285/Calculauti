@@ -1,0 +1,48 @@
+html {
+    background-color: #383836;
+}
+h1, h2 {
+    background-color: darkorange;
+    text-align: center;
+    align-items: center;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin: 2px solid black;
+    padding: 5px solid black;
+}
+h2 {
+    font-family: monospace;
+}
+.number {
+    background-color: darkorange;
+}
+.operator {
+    background-color: #7d7b75;
+}
+.equal {
+    background-color: #c4b4ad;
+}
+.reset {
+    background-color: #4b783e;
+}
+div {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    height: 100px;
+    width: 390px;
+    border-radius: black;
+    border-width: 3px;
+}
+input{
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    transition: 0.5s;
+}
+input:hover{
+    background-color: white;
+}
