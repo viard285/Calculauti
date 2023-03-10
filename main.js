@@ -25,7 +25,7 @@ buttonEqual.addEventListener('click', function()
 });
 buttonReset.addEventListener('click', function()
 {
-    clearScreen();
+    document.getElementById('display').value = '';
 });
 
 function calculauti() 
