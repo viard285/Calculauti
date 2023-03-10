@@ -35,7 +35,7 @@ function calculauti()
     let operatorIndex;
     let operator;
 
-    for(let i; i = makeOperation.length; i++)
+    for(let i = 0; i < makeOperation.length; i++)
     {
         if(displayValue.indexOf(makeOperation[i]) > -1)
         {
@@ -43,23 +43,27 @@ function calculauti()
             operator = makeOperation[i];
         }
     }
-    let operatorOne;
-    let operatorTwo;
-    switch(makeOperation)
+    let operatorOne = displayValue.slice(0, operatorIndex);
+    let operatorTwo = displayValue.slice(operatorIndex + 1);
+    let result;
+    operatorOne = parseInt(operatorOne);
+    operatorTwo = parseInt(operatorTwo);
+
+    switch(operator)
     {
         case '+':
-            result = parseInt(operatorOne) + parseInt(operatorTwo);
+            result = operatorOne + operatorTwo;
             break;
         case '-':
-            result = parseInt(operatorOne) - parseInt(operatorTwo);
+            result = operatorOne - operatorTwo;
             break;
         case '*':
-            result = parseInt(operatorOne) * parseInt(operatorTwo);
+            result = operatorOne * operatorTwo;
             break;
         case '/':
-            result = parseInt(operatorOne) / parseInt(operatorTwo);
+            result = operatorOne / operatorTwo;
             break;
 
     }
-    return result;
+    document.getElementById('display').value = result;
 }
