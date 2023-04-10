@@ -30,6 +30,7 @@ buttonReset.addEventListener('click', function()
 
 function calculauti() 
 {
+    let message;
     let makeOperation = ['+','-','*','/'];
     let displayValue = document.getElementById('display').value;
     let operatorIndex;
@@ -49,6 +50,7 @@ function calculauti()
     operatorOne = parseInt(operatorOne);
     operatorTwo = parseInt(operatorTwo);
 
+    
     switch(operator)
     {
         case '+':
@@ -64,6 +66,18 @@ function calculauti()
             result = operatorOne / operatorTwo;
             break;
 
+    }
+    if(isNaN(result))
+    {
+        message = 'Error';
+    }
+    else if(operator == '/' && operatorTwo == 0)
+    {
+        message = 'No puedes dividir por 0';
+    }
+    else
+    {
+        message = result;
     }
     document.getElementById('display').value = result;
 }

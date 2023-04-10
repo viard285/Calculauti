@@ -46,3 +46,21 @@ input{
 input:hover{
     background-color: white;
 }
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h6{
+    color: white;
+}
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: orange;
+    transition: 1s;
+    font-size: 12px;
+}
+a:hover{
+    color: white;
+}
